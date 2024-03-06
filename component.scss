@@ -1,0 +1,45 @@
+// color変数
+$white: #FAFAFA;
+$black: #111111;
+$main: #17A59E;
+$back: #EDEDED;
+$yellow: #F5BE0A;
+$orange: #FB6D06;
+
+//アニメーション
+@mixin hover_link($main: $main,$width: 50%, $bottom: 2px, $height: 2px){
+  padding-bottom: $bottom;
+  position: relative;
+    &::before{
+      background: $main;
+      content: '';
+      width: $width;
+      height: $height;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      margin: auto;
+      transform-origin: right top;
+      transform: scale(0, 1);
+      transition: transform .3s;
+    }
+    &:hover::before{
+      transform-origin: left top;
+      transform: scale(1, 1);
+    }
+}
+
+@mixin icon_animation(){
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1,1);
+    transition: transform .3s;
+    &:hover{
+      transform: scale(1.5);
+      transition: transform .3s;
+    }
+}

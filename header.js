@@ -1,0 +1,1 @@
+document.write('<header class="header"><div class="header__inner"><div class="header__logo"><a class="header__logo__link" href="./index.html"><img src="./img/nakatani__logo.svg"></a></div><nav class="header__nav"><ul class="header__list"><li class="header__item">トップページ</li><li class="header__item">わたしについて</li><li class="header__item">制作実績</li></ul></nav></div></header>');

@@ -1,0 +1,224 @@
+@import "reset.scss","component.scss";
+
+
+.work{
+  background-color: $back;
+  &_inner{
+    max-width: 1280px;
+    padding: 120px 34px;
+    margin: 0 auto;
+    @include mq(768px){
+      padding: 39px 15px 0px
+    }
+    @include mq(500px){
+      padding-bottom: 50px;
+    }
+  }
+  &_heading{
+    color: $main;
+    font-family: "Noto Sans JP";
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.7rem;
+    letter-spacing: 5.6px;
+    background-color: $white;
+    display: inline-flex;
+    padding: 13px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    @include mq(500px){
+      font-size: 2.9rem;
+    }
+  }
+  &_card{
+    &_inner{
+      display: flex;
+      justify-content: space-between;
+      background-color: #FAFAFA;
+      margin-top: 60px;
+      border-radius: 20px;
+      box-shadow: 10px 5px 5px #EDEDED;
+      transition: 1.4s;
+      &:hover{
+      box-shadow: 5px 5px 5px #b1b1b1;
+      }
+      @include mq(768px){
+        flex-direction: column-reverse;
+      }
+      }
+    }
+  &_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 54px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    @include mq(1230px){
+      max-width: 330px;
+    }
+    @include mq(768px){
+      padding-bottom: 62px;
+    }
+    @include mq(500px){
+      padding-left: 24px;
+    }
+  }
+  &_info{
+    color: #111;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.0rem;
+    @include mq(768px){
+      font-size: 1.4rem;
+    }
+  }
+  &_lead{
+    color: #111;
+    font-family: "Montserrat Alternates";
+    font-size: 4.0rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 6.0rem;
+    margin-top: 0.6rem;
+    @include mq(990px){
+      font-size: 3.2rem;
+    }
+    @include mq(768px){
+      font-size: 2.6rem;
+      line-height: 3.4rem;
+      margin-top: 1.0rem;
+    }
+  }
+  &_label{
+    background-color: $main;
+    color: $white;
+    display: inline-flex;
+    padding: 10px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 140px;
+    margin-top: 2.3rem;
+    font-size: 1.2rem;
+    @include mq(990px){
+      margin-top: 1.3rem;
+    }
+    @include mq(768px){
+      font-size: 1.0rem;
+    }
+  }
+  &_button{
+    width: 257px;
+    margin-top: 5.1rem;
+    @include mq(990px){
+      margin-top: 5.1rem;
+    }
+  }
+  &_button_text{
+    color: $black;
+    font-family: "Noto Sans JP";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 1.2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2px;
+    position: relative;
+    &::before{
+      content: '';
+      background: $main;
+      width: 35%;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      margin: auto;
+      transform-origin: right top;
+      transform: scale(0, 1);
+      transition: transform .3s;
+    }
+    @include mq(768px){
+      font-size: 1.4rem;
+    }
+    @include mq(500px){
+      width: 181px;
+    }
+  }
+  &_icon{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1,1);
+    transition: transform .3s;
+    // &:hover{
+    //   transform: scale(1.2);
+    //   transition: transform .3s;
+    // }
+    &_button{
+      position: absolute;
+      top: -20px;
+      left: 180px;
+    }
+  }
+  
+  &_wrapper{
+    margin: 12px;
+    overflow:hidden;
+    width: 100%;
+    max-width: 500px;
+    @include mq(990px){
+    max-width: 480px;
+    }
+    @include mq(768px){
+    max-width: 100%;
+    margin: 0px;
+    }
+  }
+  &_thumbnail{
+    height: auto;
+    width: 100%;
+    // padding-left: 6.0rem;
+    max-height: 432px;
+    flex-shrink: 0;
+    display: inline-block;
+    border-radius: 0px 20px 20px 0px;
+    transition:1s all;
+    // &:hover{
+    //   transform:scale(1.2,1.2);
+    //   transition:1s all;
+    // }
+    @include mq(990px){
+      height: 100%;
+    }
+    @include mq(768px){
+      border-radius: 20px;
+      padding-left: 0px;
+    }
+  }
+}
+
+
+.work_card_inner:hover .work_button_text::before{
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+  .work_card_inner:hover .work_icon{
+    transform: scale(1.2);
+    transition: transform .3s;
+}
+.work_card_inner:hover .work_thumbnail{
+  transform:scale(1.2,1.2);
+      transition:1s all;
+}
+
+

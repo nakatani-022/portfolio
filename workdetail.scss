@@ -1,0 +1,172 @@
+@import "reset.scss","component.scss","header.scss","footer.scss","work.scss";
+
+.worktop{
+  max-width: 1284px;
+  margin: 173px auto 0px;
+  padding-left: 40px;
+  padding-right: 40px;
+  &_name{
+    color: var(--Rectangle-5, #242424);
+    font-size: 6.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 6.5rem;
+    letter-spacing: 2.6px;
+    font-family: "Noto Sans JP";
+  }
+  &_label{
+    margin-top: 19px;
+    font-size: 1.2rem;
+    border-radius: 4.0rem;
+    border: 2px solid $main;
+    padding: 17px 20px;
+    display: inline-flex;
+    padding: 17px 20px;
+    justify-content: center;
+    align-items: center;
+    line-height: 100%;
+    color: $black;
+    font-weight: 700;
+    font-family: "Noto Sans JP";
+    background-color: $white;
+    margin-right: 14px;
+  }
+  &_kv{
+    margin-top: 34px;
+  }
+  &_img{
+    max-width: 1280px;
+    width: 100%;
+  }
+}
+
+.concept{
+  background-color: $back;
+  &_inner{
+    max-width: 1280px;
+    display: flex;
+    margin: 133px auto 0px;
+    justify-content: center;
+    padding: 78px 40px;
+    @include mq(911px){
+      display: block;
+      max-width: 704px;
+    }
+  }
+  &_info{
+    margin-right: 63px;
+    @include mq(911px){
+      margin-right: 0px;
+    }
+  }
+  &_copy{
+    font-size: 1.9rem;
+    color: $white;
+    background-color: $main;
+    font-weight: 500;
+    font-family: "Noto Sans JP";
+    padding: 11px 26px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    max-width: 380px;
+  }
+  &_text{
+    max-width: 549px;
+    color: $black;
+    font-family: "Noto Sans JP";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.9rem;
+    letter-spacing: 1.95px;
+    margin-top: 16px;
+  }
+  &_label{
+    font-size: 1.5rem;
+    margin-top: 42px;
+    @include mq(910px){
+      margin-top: 31px;
+    }
+  }
+  &_item{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  &_wrapper{
+    display: flex;
+    align-items: center;
+    @include mq(910px){
+      margin-top: 66px;
+    }
+  }
+  &_img{
+    max-width: 625px;
+    max-height: 410px;
+    flex-shrink: 0;
+    min-width: 420px;
+    min-height: 320px;
+    @include mq(1160px){
+      width: 100%;
+    }
+  }
+  &_label_item{
+    font-size: 1.2rem;
+    border-radius: 4.0rem;
+    border: 2px solid $main;
+    display: inline-flex;
+    padding: 13px 20px;
+    justify-content: center;
+    align-items: center;
+    line-height: 100%;
+    color: $black;
+    font-weight: 700;
+    font-family: "Noto Sans JP";
+    background-color: $white;
+    margin-right: 14px;
+    max-width: fit-content;
+    width: 310px;
+  }
+  &_item_text{
+    display: inline-block;
+    max-width: 480px;
+  }
+}
+
+.product{
+  max-width: 1360px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+  &_01{
+    width: 100%;
+  }
+}
+
+.workdetail{
+  background-color: $back;
+  &_inner{
+    max-width: 1280px;
+    padding: 50px 34px 80px;
+    margin: 0 auto;
+  }
+  &_heading{
+    color: $white;
+    font-family: "Noto Sans JP";
+    font-size: 1.9rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.5rem;
+    letter-spacing: 5.6px;
+    background-color: $orange;
+    display: inline-flex;
+    padding: 11px 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 0.8rem;
+  }
+}
