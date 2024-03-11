@@ -24,6 +24,10 @@ const check = document.querySelectorAll(".check");
 
 
 
+
+
+
+
 // タブの切り替え
 const tab_lists = document.querySelectorAll('.tab_item');
 
@@ -40,3 +44,47 @@ document.addEventListener('DOMContentLoaded', () => {
     tab_lists[i].addEventListener('click', tab_switch);
   }
 });
+
+
+const work_box = document.querySelector("#work_box");
+
+const work_cards = [
+  {
+    info: '一般社団法人MBTI連盟',
+    title: 'MBTI',
+    label: 'Owned Media',
+    url: './work_list/mbti.html',
+    src: './img/mbti_thumbnail.png',
+  },
+  {
+    info: '株式会社サラベル',
+    title: 'Sarahbel Inc.',
+    label: 'コーポレートサイト',
+    url: './work_list/sarahbelInc.html',
+    src: './img/sarahbel_thumbnail3.png',
+  },
+  {
+    info: 'キャンプサイト',
+    title: 'GRAM CAMP SQUARE',
+    label: 'コーポレートサイト',
+    url: './work_list/gramcampsquare.html',
+    src: './img/gram_camp_square_thumbnail.png',
+  },
+  {
+    info: 'ガーデンウエディング',
+    title: 'Lumiere Naturel',
+    label: 'LP',
+    url: './work_list/gardenwedding.html',
+    src: './img/garden_wedding_thumbnail.png',
+  },
+
+]
+
+  for(let i=0; i < work_cards.length; i++){
+  const {info, title, label, url, src} = work_cards[i];
+  console.log(url);
+  const card_create = `<li class="work_card" >
+  <a class="work_card_inner" href="${url}"><div class="work_content"><p class="work_info">${info}</p><h3 class="work_lead">${title}</h3><label class="work_label">${label}</label><button class="work_button"><div class="work_button_text">制作実績<span class="work_icon"><img class="work_icon_button" src="./img/Button__Icon.svg" alt=""></span></div></button></div><div class="work_wrapper"><img class="work_thumbnail" src="${src}" alt="キャプチャ:${title}のサムネイル"></div></a>`;
+
+  work_box.insertAdjacentHTML('beforebegin', card_create);
+  }
