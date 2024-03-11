@@ -1,46 +1,57 @@
-@import "reset.scss","component.scss","header.scss","work.scss","footer.scss";
+@import "reset.scss", "component.scss", "header.scss", "work.scss", "footer.scss";
 
-.topkv{
-    max-width: 1354px;
-    padding: 0px 34px;
-    margin: 165px auto 0px;
-    @include mq(768px){
-      margin-top: 125px;
-    }
-  &_inner{
+
+
+.topkv {
+  max-width: 1354px;
+  padding: 0px 34px;
+  margin: 165px auto 0px;
+
+  @include mq(768px) {
+    margin-top: 125px;
+  }
+
+  &_inner {
     display: flex;
     justify-content: space-between;
-    @include mq(768px){
+
+    @include mq(768px) {
       display: flex;
       flex-direction: column-reverse;
     }
   }
-  &_main{
+
+  &_main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: 20px;
-    @include mq(768px){
+
+    @include mq(768px) {
       margin-top: 5.3rem;
     }
-    
+
   }
-  &_title{
+
+  &_title {
     color: #1E1E1E;
     font-family: "Noto Sans JP";
     font-size: 4.4rem;
     font-style: normal;
     font-weight: 700;
     line-height: 7.1rem;
-    @include mq(500px){
+
+    @include mq(500px) {
       color: #1E1E1E;
       font-size: 3.5rem;
       font-style: normal;
       font-weight: 600;
-      line-height: 6rem; /* 153.571% */
+      line-height: 6rem;
+      /* 153.571% */
     }
   }
-  &_description{
+
+  &_description {
     color: #111;
     font-family: "Noto Sans JP";
     font-size: 2.2rem;
@@ -50,71 +61,87 @@
     letter-spacing: 1.1px;
     padding-left: 8px;
     padding-top: 12px;
-    @include mq(500px){
+
+    @include mq(500px) {
       padding: 0px;
     }
   }
-  &_logo{
+
+  &_logo {
     margin-top: 61px;
-    @include mq(768px){
+
+    @include mq(768px) {
       text-align: end;
     }
   }
-  &_img{
+
+  &_img {
     width: 100%;
-    @include mq(1120px){
+
+    @include mq(1120px) {
       max-width: 400px;
     }
-    @include mq(768px){
+
+    @include mq(768px) {
       max-width: 340px;
     }
   }
 }
 
 
-.message{
+.message {
   background-color: $main;
   margin-top: 126px;
-  @include mq(500px){
+
+  @include mq(500px) {
     margin-top: 50px;
   }
-  &_inner{
+
+  &_inner {
     max-width: 1354px;
     padding: 140px 34px;
     margin: 0px auto;
-    @include mq(768px){
+
+    @include mq(768px) {
       padding: 160px 34px 140px;
     }
   }
-  &_title{
+
+  &_title {
     color: $white;
     font-family: "Noto Sans JP";
     font-size: 4.5rem;
     font-style: normal;
     font-weight: 700;
     line-height: 6.9rem;
-    @include mq(990px){
+
+    @include mq(990px) {
       font-size: 3.8rem;
       line-height: 5.2rem;
     }
-    @include mq(768px){
+
+    @include mq(768px) {
       font-size: 2.8rem;
       line-height: 4.2rem;
     }
   }
-  &_info{
+
+  &_info {
     color: $white;
     font-size: 1.8rem;
     font-style: normal;
     font-weight: 600;
-    line-height: 59px; /* 156% */
+    line-height: 59px;
+    /* 156% */
     letter-spacing: 1px;
     padding-left: 4px;
-    @include mq(768px){
+
+    @include mq(768px) {
       font-size: 1.6rem;
     }
   }
-  &_text{
+
+  &_text {
     color: $white;
     font-family: "Noto Sans JP";
     font-size: 1.6rem;
@@ -128,44 +155,50 @@
     margin-top: 80px;
     margin-left: auto;
     padding-left: 60px;
-    @include mq(768px){
+
+    @include mq(768px) {
       font-size: 1.5rem;
       line-height: 3.3rem;
       font-weight: 400;
     }
-    @include mq(390px){
+
+    @include mq(390px) {
       max-height: none;
     }
   }
 }
 
-.aboutme{
-  &_inner{
+.aboutme {
+  &_inner {
     display: flex;
     justify-content: space-between;
     max-width: 1352px;
     padding: 0px 34px 81px;
     padding-top: 100px;
     margin: 0 auto;
-    @include mq(768px){
+
+    @include mq(768px) {
       flex-direction: column-reverse;
       max-width: 480px;
       padding-top: 76px;
       padding-bottom: 76px;
     }
   }
-  &_content{
+
+  &_content {
     max-width: 474px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: 50px;
-    @include mq(768px){
+
+    @include mq(768px) {
       margin-top: 30px;
       margin-right: 0px;
     }
   }
-  &_heading{
+
+  &_heading {
     color: $main;
     font-family: "Noto Sans JP";
     font-size: 3.5rem;
@@ -173,11 +206,13 @@
     font-weight: 700;
     line-height: 3.7rem;
     letter-spacing: 5.6px;
-    @include mq(500px){
+
+    @include mq(500px) {
       font-size: 2.9rem;
     }
   }
-  &_text{
+
+  &_text {
     color: #111;
     font-family: "Noto Sans JP";
     font-size: 1.5rem;
@@ -187,22 +222,26 @@
     letter-spacing: 0.21rem;
     margin-top: 34px;
     max-width: 484px;
-    @include mq(500px){
+
+    @include mq(500px) {
       font-size: 1.3rem;
       line-height: 2.9rem;
     }
   }
-  &_button{
+
+  &_button {
     margin-top: 120px;
     margin-left: auto;
     width: 257px;
-    @include mq(990px){
+
+    @include mq(990px) {
       margin-top: 70px;
     }
-    @include mq(768px){
-    }
+
+    @include mq(768px) {}
   }
-  &_button_text{
+
+  &_button_text {
     color: #111;
     font-family: "Noto Sans JP";
     font-size: 1.5rem;
@@ -213,42 +252,47 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include hover_link($width:35%);
+    @include hover_link($width: 35%);
   }
-  &_icon{
+
+  &_icon {
     position: absolute;
     display: block;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    transform: scale(1,1);
+    transform: scale(1, 1);
     transition: transform .3s;
-    &:hover{
+
+    &:hover {
       transform: scale(1.2);
       transition: transform .3s;
     }
-    &_button{
+
+    &_button {
       position: absolute;
       top: -20px;
       left: 180px;
     }
   }
-  &_img{
+
+  &_img {
     width: 45%;
     max-width: 448px;
-    @include mq(768px){
+
+    @include mq(768px) {
       width: 100%;
       display: none;
     }
-    &_sp{
+
+    &_sp {
       display: none;
-      @include mq(768px){
+
+      @include mq(768px) {
         display: block;
       }
     }
   }
 }
-
-
 
