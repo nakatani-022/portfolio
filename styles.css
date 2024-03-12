@@ -911,12 +911,17 @@ li {
   cursor: pointer;
   min-width: 15rem;
   text-align: center;
+  box-shadow: 2px 2px 2px #EDEDED;
+  transition: 0.3s;
+}
+.tab_item:hover {
+  box-shadow: 2px 2px 2px #b1b1b1;
 }
 
 .check::before {
   content: "●";
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   color: #FB6D06;
   padding-right: 10px;
 }
