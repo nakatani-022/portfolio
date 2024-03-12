@@ -97,8 +97,6 @@ const work_cards = [
     src: './img/my_portfolio_thumbnail.png',
     type: 'tab_program'
   },
-
-
 ]
 
 
