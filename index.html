@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/bmr0mlq.css">
+  <script src="./js/main.js" defer></script>
   <title>中谷健悟ポートフォリオ</title>
 </head>
 
@@ -98,69 +99,19 @@
       </div>
     </section>
     <section class="work">
-      <ul class="work_inner">
+      <div class="work_inner">
         <div class="work_heading">
           <h2 class="work_title">制作したもの</h2>
         </div>
-        <li class="work_card">
-          <a class="work_card_inner" href="./work_list/sarahbelInc.html">
-            <div class="work_content">
-              <p class="work_info">株式会社サラベル</p>
-              <h3 class="work_lead">Sarahbel Inc.</h3>
-              <label class="work_label">コーポレートサイト</label>
-              <button class="work_button">
-                <div class="work_button_text">制作実績
-                  <span class="work_icon">
-                    <img class="work_icon_button" src="./img/Button__Icon.svg" alt="">
-                  </span>
-                </div>
-              </button>
-            </div>
-            <div class="work_wrapper">
-              <img class="work_thumbnail" src="./img/sarahbel_thumbnail3.png" alt="キャプチャ:Sarahbel Incのサムネイル">
-            </div>
-          </a>
-        </li>
-        <li class="work_card" >
-          <a class="work_card_inner" href="./work_list/mbti.html">
-            <div class="work_content">
-              <p class="work_info">一般法人MBTI連盟</p>
-              <h3 class="work_lead">MBTI＋</h3>
-              <label class="work_label">Owend Media</label>
-              <button class="work_button">
-                <div class="work_button_text">制作実績
-                  <span class="work_icon">
-                    <img class="work_icon_button" src="./img/Button__Icon.svg" alt="">
-                  </span>
-                </div>
-              </button>
-            </div>
-            <div class="work_wrapper">
-              <img class="work_thumbnail" src="./img/mbti_thumbnail.png" alt="キャプチャ:MBTI＋のサムネイル">
-            </div>
-          </a>
-        </li>
-        <li class="work_card">
-          <a class="work_card_inner" href="./work_list/gramcampsquare.html">
-            <div class="work_content">
-              <p class="work_info">キャンプサイト</p>
-              <h3 class="work_lead">GRAM CAMP SQUARE</h3>
-              <label class="work_label">コーポレートサイト</label>
-              <button class="work_button">
-                <div class="work_button_text">制作実績
-                  <span class="work_icon">
-                    <img class="work_icon_button" src="./img/Button__Icon.svg" alt="">
-                  </span>
-                </div>
-              </button>
-            </div>
-            <div class="work_wrapper">
-              <img class="work_thumbnail" src="./img/gram_camp_square_thumbnail.png" alt="キャプチャ:GRAM CAMP SQUAREのサムネイル">
-            </div>
-          </a>
-        </li>
-        
+       <ul class="tab">
+        <li class="tab_item" id="tab_all">すべて</li>
+        <li class="tab_item" id="tab_program">プログラム</li>
+        <li class="tab_item" id="tab_design">デザイン</li>
+       </ul>
+
+       <ul class="work_conent" id="work_box">
       </ul>
+    </div>
     </section>
   </main>
   <footer class="footer">
@@ -180,9 +131,7 @@
       All Rights Reserved 2024 ©︎ Nakatani Kengo
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>
-  <script src="./js/main.js"></script>
+
 </body>
 
 </html>
