@@ -33,17 +33,9 @@ const tab_lists = document.querySelectorAll('.tab_item');
 
 tab_lists[0].classList.add('check');
 
-// thisを使用するためにアロー関数は使用しない
-function tab_switch() {
-  document.querySelector('.check').classList.remove('check');
-  this.classList.add('check');
-};
 
-document.addEventListener('DOMContentLoaded', () => {
-  for(let i= 0; i < tab_lists.length; i++){
-    tab_lists[i].addEventListener('click', tab_switch);
-  }
-});
+
+
 
 
 const work_box = document.querySelector("#work_box");
@@ -55,6 +47,7 @@ const work_cards = [
     label: 'Owned Media',
     url: './work_list/mbti.html',
     src: './img/mbti_thumbnail.png',
+    type: 'tab_design'
   },
   {
     info: '株式会社サラベル',
@@ -62,6 +55,7 @@ const work_cards = [
     label: 'コーポレートサイト',
     url: './work_list/sarahbelInc.html',
     src: './img/sarahbel_thumbnail3.png',
+    type: 'tab_design'
   },
   {
     info: 'キャンプサイト',
@@ -69,6 +63,7 @@ const work_cards = [
     label: 'コーポレートサイト',
     url: './work_list/gramcampsquare.html',
     src: './img/gram_camp_square_thumbnail.png',
+    type: 'tab_program'
   },
   {
     info: 'ガーデンウエディング',
@@ -76,15 +71,57 @@ const work_cards = [
     label: 'LP',
     url: './work_list/gardenwedding.html',
     src: './img/garden_wedding_thumbnail.png',
+    type: 'tab_program'
   },
 
 ]
 
-  for(let i=0; i < work_cards.length; i++){
-  const {info, title, label, url, src} = work_cards[i];
-  console.log(url);
-  const card_create = `<li class="work_card" >
-  <a class="work_card_inner" href="${url}"><div class="work_content"><p class="work_info">${info}</p><h3 class="work_lead">${title}</h3><label class="work_label">${label}</label><button class="work_button"><div class="work_button_text">制作実績<span class="work_icon"><img class="work_icon_button" src="./img/Button__Icon.svg" alt=""></span></div></button></div><div class="work_wrapper"><img class="work_thumbnail" src="${src}" alt="キャプチャ:${title}のサムネイル"></div></a>`;
 
-  work_box.insertAdjacentHTML('beforebegin', card_create);
+  for(let i=0; i < work_cards.length; i++){
+    const {info, title, label, url, src} = work_cards[i];
+    console.log(url);
+    const card_create = `<li class="work_card" >
+    <a class="work_card_inner" href="${url}"><div class="work_content"><p class="work_info">${info}</p><h3 class="work_lead">${title}</h3><label class="work_label">${label}</label><button class="work_button"><div class="work_button_text">制作実績<span class="work_icon"><img class="work_icon_button" src="./img/Button__Icon.svg" alt=""></span></div></button></div><div class="work_wrapper"><img class="work_thumbnail" src="${src}" alt="キャプチャ:${title}のサムネイル"></div></a>`;
+
+    work_box.insertAdjacentHTML('beforebegin', card_create);
   }
+
+  // thisを使用するために関数宣言を使用する
+  // タブの切り替えボタン
+function tab_switch() {
+  document.querySelector('.check').classList.remove('check');
+  this.classList.add('check');
+
+  // プログラムタブが選択された場合
+  // 配列からtypeとタブの名前が同一ではないものを非表示にする
+  if(tab_program.classList.contains('check')){
+    for(let i=0; i < work_cards.length; i++){
+      document.querySelectorAll('.work_card')[i].style.display = 'block';
+      if(work_cards[i].type != 'tab_program'){
+        document.querySelectorAll('.work_card')[i].style.display = 'none';
+      }
+    }
+  } else if (tab_design.classList.contains('check')) {
+    for(let i=0; i < work_cards.length; i++){
+      document.querySelectorAll('.work_card')[i].style.display = 'block';
+      if(work_cards[i].type != 'tab_design'){
+        document.querySelectorAll('.work_card')[i].style.display = 'none';
+      }
+    }
+  } else {
+    for(let i=0; i < work_cards.length; i++){
+    document.querySelectorAll('.work_card')[i].style.display = 'block';
+  }
+  };
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  for(let i= 0; i < tab_lists.length; i++){
+    tab_lists[i].addEventListener('click', tab_switch);
+  }
+});
+
+
+const tab_contents = document.querySelectorAll('.work_card');
+  
+tab_contents[0].classList.add('show');
