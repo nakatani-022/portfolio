@@ -63,7 +63,7 @@ const work_cards = [
     label: 'コーポレートサイト',
     url: './work_list/gramcampsquare.html',
     src: './img/gram_camp_square_thumbnail.png',
-    type: 'tab_program'
+    type: 'tab_design'
   },
   {
     info: 'ガーデンウエディング',
@@ -71,9 +71,32 @@ const work_cards = [
     label: 'LP',
     url: './work_list/gardenwedding.html',
     src: './img/garden_wedding_thumbnail.png',
+    type: 'tab_design'
+  },
+  {
+    info: 'GoogleBooksAPI×React×TypeScript',
+    title: '知識の森',
+    label: 'Webアプリ',
+    url: './work_list/gardenwedding.html',
+    src: './img/google_books_thumbnail.png',
     type: 'tab_program'
   },
-
+  {
+    info: 'cording',
+    title: 'sonozaki_corporate',
+    label: 'Webサイト',
+    url: './work_list/gardenwedding.html',
+    src: './img/sonozaki_corporate_thumbnail.png',
+    type: 'tab_program'
+  },
+  {
+    info: 'my portfolio',
+    title: 'nakatani portfolio',
+    label: 'Webサイト',
+    url: './work_list/gardenwedding.html',
+    src: './img/my_portfolio_thumbnail.png',
+    type: 'tab_program'
+  },
 ]
 
 
