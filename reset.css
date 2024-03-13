@@ -97,7 +97,9 @@ button {
   cursor: pointer;
   outline: none;
   padding: 0;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 a {
@@ -111,4 +113,4 @@ html {
 
 li {
   list-style-type: none;
-}
+}/*# sourceMappingURL=reset.css.map */
