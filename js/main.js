@@ -77,15 +77,15 @@ const work_cards = [
     info: 'GoogleBooksAPI×React×TypeScript',
     title: '知識の森',
     label: 'Webアプリ',
-    url: './work_list/gardenwedding.html',
+    url: './work_list/googlebooks.html',
     src: './img/google_books_thumbnail.png',
     type: 'tab_program'
   },
   {
     info: 'cording',
-    title: 'sonozaki_corporate',
+    title: '株式会社園崎',
     label: 'Webサイト',
-    url: './work_list/gardenwedding.html',
+    url: './work_list/sonozaki_corporate.html',
     src: './img/sonozaki_corporate_thumbnail.png',
     type: 'tab_program'
   },
@@ -93,9 +93,9 @@ const work_cards = [
     info: 'my portfolio',
     title: 'nakatani portfolio',
     label: 'Webサイト',
-    url: './work_list/gardenwedding.html',
+    url: './work_list/my_portfolio.html',
     src: './img/my_portfolio_thumbnail.png',
-    type: 'tab_program'
+    type: 'tab_program',
   },
 
 

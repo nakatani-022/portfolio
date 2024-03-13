@@ -842,6 +842,12 @@ li {
   top: -20px;
   left: 180px;
 }
+@media (max-width: 360px) {
+  .work_icon_button {
+    left: 90px;
+    width: 50px;
+  }
+}
 .work_wrapper {
   margin: 12px;
   overflow: hidden;
@@ -897,6 +903,7 @@ li {
 
 .tab {
   display: flex;
+  flex-wrap: wrap;
 }
 .tab_item {
   border: 0.2rem solid #17A59E;
@@ -913,6 +920,20 @@ li {
   text-align: center;
   box-shadow: 2px 2px 2px #EDEDED;
   transition: 0.3s;
+}
+@media (max-width: 560px) {
+  .tab_item {
+    font-size: 1.2rem;
+    min-width: 12rem;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 460px) {
+  .tab_item {
+    padding: 10px 20px;
+    min-width: 10rem;
+    margin-bottom: 10px;
+  }
 }
 .tab_item:hover {
   box-shadow: 2px 2px 2px #b1b1b1;
