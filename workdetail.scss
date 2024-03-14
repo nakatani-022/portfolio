@@ -1,11 +1,12 @@
-@import "reset.scss","component.scss","header.scss","footer.scss","work.scss";
+@import "reset.scss", "component.scss", "header.scss", "footer.scss", "work.scss";
 
-.worktop{
+.worktop {
   max-width: 1284px;
   margin: 173px auto 0px;
   padding-left: 40px;
   padding-right: 40px;
-  &_name{
+
+  &_name {
     color: var(--Rectangle-5, #242424);
     font-size: 6.5rem;
     font-style: normal;
@@ -14,7 +15,8 @@
     letter-spacing: 2.6px;
     font-family: "Noto Sans JP";
   }
-  &_label{
+
+  &_label {
     margin-top: 19px;
     font-size: 1.2rem;
     border-radius: 4.0rem;
@@ -31,35 +33,42 @@
     background-color: $white;
     margin-right: 14px;
   }
-  &_kv{
+
+  &_kv {
     margin-top: 34px;
   }
-  &_img{
+
+  &_img {
     max-width: 1280px;
     width: 100%;
   }
 }
 
-.concept{
+.concept {
   background-color: $back;
-  &_inner{
+
+  &_inner {
     max-width: 1280px;
     display: flex;
     margin: 133px auto 0px;
     justify-content: center;
     padding: 78px 40px;
-    @include mq(911px){
+
+    @include mq(911px) {
       display: block;
       max-width: 704px;
     }
   }
-  &_info{
+
+  &_info {
     margin-right: 63px;
-    @include mq(911px){
+
+    @include mq(911px) {
       margin-right: 0px;
     }
   }
-  &_copy{
+
+  &_copy {
     font-size: 1.9rem;
     color: $white;
     background-color: $main;
@@ -71,7 +80,8 @@
     border-radius: 8px;
     max-width: 380px;
   }
-  &_text{
+
+  &_text {
     max-width: 549px;
     color: $black;
     font-family: "Noto Sans JP";
@@ -82,36 +92,44 @@
     letter-spacing: 1.95px;
     margin-top: 16px;
   }
-  &_label{
+
+  &_label {
     font-size: 1.5rem;
     margin-top: 42px;
-    @include mq(910px){
+
+    @include mq(910px) {
       margin-top: 31px;
     }
   }
-  &_item{
+
+  &_item {
     margin-top: 20px;
     display: flex;
     align-items: center;
   }
-  &_wrapper{
+
+  &_wrapper {
     display: flex;
     align-items: center;
-    @include mq(910px){
+
+    @include mq(910px) {
       margin-top: 66px;
     }
   }
-  &_img{
+
+  &_img {
     max-width: 625px;
     max-height: 410px;
     flex-shrink: 0;
     min-width: 420px;
     min-height: 320px;
-    @include mq(1160px){
+
+    @include mq(1160px) {
       width: 100%;
     }
   }
-  &_label_item{
+
+  &_label_item {
     font-size: 1.2rem;
     border-radius: 4.0rem;
     border: 2px solid $main;
@@ -128,32 +146,36 @@
     max-width: fit-content;
     width: 310px;
   }
-  &_item_text{
+
+  &_item_text {
     display: inline-block;
     max-width: 480px;
   }
 }
 
-.product{
+.product {
   max-width: 1360px;
   margin: 0 auto;
   margin-top: 100px;
   margin-bottom: 100px;
   padding-left: 40px;
   padding-right: 40px;
-  &_01{
+
+  &_01 {
     width: 100%;
   }
 }
 
-.workdetail{
+.workdetail {
   background-color: $back;
-  &_inner{
+
+  &_inner {
     max-width: 1280px;
     padding: 50px 34px 80px;
     margin: 0 auto;
   }
-  &_heading{
+
+  &_heading {
     color: $white;
     font-family: "Noto Sans JP";
     font-size: 1.9rem;
@@ -168,5 +190,44 @@
     align-items: center;
     gap: 10px;
     border-radius: 0.8rem;
+  }
+}
+
+.function {
+  &_content {
+    margin: 80px 0px;
+  }
+  &_item {
+    display: flex;
+    max-width: 1140px;
+    padding: 0px 10px;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 4.8rem;
+  }
+
+  &_img {
+    max-width: 522px;
+    max-height: 302px;
+  }
+
+  &_explane {
+    max-width: 512px;
+    margin-top: 36px;
+  }
+
+  &_ttl {
+    font-family: "Noto Sans JP";
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: $main;
+    letter-spacing: 8%;
+  }
+
+  &_text {
+    font-size: 1.6rem;
+    color: #111111;
+    margin-top: 2.3rem;
+    line-height: 3.5rem;
   }
 }
