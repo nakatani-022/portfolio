@@ -5,6 +5,10 @@
   margin: 173px auto 0px;
   padding-left: 40px;
   padding-right: 40px;
+  @include mq(500px){
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
   &_name {
     color: var(--Rectangle-5, #242424);
@@ -14,6 +18,9 @@
     line-height: 6.5rem;
     letter-spacing: 2.6px;
     font-family: "Noto Sans JP";
+    @include mq(500px){
+      font-size: 5.5rem;
+    }
   }
 
   &_label {
@@ -54,16 +61,19 @@
     justify-content: center;
     padding: 78px 40px;
 
-    @include mq(911px) {
+    @include mq(1050px) {
       display: block;
       max-width: 704px;
+    }
+    @include mq(500px) {
+      padding: 78px 16px;
     }
   }
 
   &_info {
     margin-right: 63px;
 
-    @include mq(911px) {
+    @include mq(1050px) {
       margin-right: 0px;
     }
   }
@@ -97,7 +107,7 @@
     font-size: 1.5rem;
     margin-top: 42px;
 
-    @include mq(910px) {
+    @include mq(1050px) {
       margin-top: 31px;
     }
   }
@@ -112,7 +122,7 @@
     display: flex;
     align-items: center;
 
-    @include mq(910px) {
+    @include mq(1050px) {
       margin-top: 66px;
     }
   }
@@ -126,6 +136,10 @@
 
     @include mq(1160px) {
       width: 100%;
+    }
+    @include mq(1050px) {
+      min-width: auto;
+      min-height: auto;
     }
   }
 
@@ -173,6 +187,9 @@
     max-width: 1280px;
     padding: 50px 34px 80px;
     margin: 0 auto;
+    @include mq(500px) {
+      padding: 50px 16px 80px;
+    }
   }
 
   &_heading {
@@ -194,9 +211,7 @@
 }
 
 .function {
-  &_content {
-    margin: 80px 0px;
-  }
+  margin: 80px 0px;
   &_item {
     display: flex;
     max-width: 1140px;
@@ -204,11 +219,17 @@
     margin: 0 auto;
     justify-content: space-between;
     margin-bottom: 4.8rem;
+    @include mq(910px){
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
   }
 
   &_img {
     max-width: 522px;
     max-height: 302px;
+    width: 100%;
   }
 
   &_explane {
