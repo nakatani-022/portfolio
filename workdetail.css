@@ -1170,6 +1170,12 @@ li {
   padding-left: 40px;
   padding-right: 40px;
 }
+@media (max-width: 500px) {
+  .worktop {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 .worktop_name {
   color: var(--Rectangle-5, #242424);
   font-size: 6.5rem;
@@ -1178,6 +1184,11 @@ li {
   line-height: 6.5rem;
   letter-spacing: 2.6px;
   font-family: "Noto Sans JP";
+}
+@media (max-width: 500px) {
+  .worktop_name {
+    font-size: 5.5rem;
+  }
 }
 .worktop_label {
   margin-top: 19px;
@@ -1214,16 +1225,21 @@ li {
   justify-content: center;
   padding: 78px 40px;
 }
-@media (max-width: 911px) {
+@media (max-width: 1050px) {
   .concept_inner {
     display: block;
     max-width: 704px;
   }
 }
+@media (max-width: 500px) {
+  .concept_inner {
+    padding: 78px 16px;
+  }
+}
 .concept_info {
   margin-right: 63px;
 }
-@media (max-width: 911px) {
+@media (max-width: 1050px) {
   .concept_info {
     margin-right: 0px;
   }
@@ -1255,7 +1271,7 @@ li {
   font-size: 1.5rem;
   margin-top: 42px;
 }
-@media (max-width: 910px) {
+@media (max-width: 1050px) {
   .concept_label {
     margin-top: 31px;
   }
@@ -1269,7 +1285,7 @@ li {
   display: flex;
   align-items: center;
 }
-@media (max-width: 910px) {
+@media (max-width: 1050px) {
   .concept_wrapper {
     margin-top: 66px;
   }
@@ -1284,6 +1300,12 @@ li {
 @media (max-width: 1160px) {
   .concept_img {
     width: 100%;
+  }
+}
+@media (max-width: 1050px) {
+  .concept_img {
+    min-width: auto;
+    min-height: auto;
   }
 }
 .concept_label_item {
@@ -1329,6 +1351,11 @@ li {
   padding: 50px 34px 80px;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .workdetail_inner {
+    padding: 50px 16px 80px;
+  }
+}
 .workdetail_heading {
   color: #FAFAFA;
   font-family: "Noto Sans JP";
@@ -1344,4 +1371,45 @@ li {
   align-items: center;
   gap: 10px;
   border-radius: 0.8rem;
+}
+
+.function {
+  margin: 80px 0px;
+}
+.function_item {
+  display: flex;
+  max-width: 1140px;
+  padding: 0px 10px;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-bottom: 4.8rem;
+}
+@media (max-width: 910px) {
+  .function_item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.function_img {
+  max-width: 522px;
+  max-height: 302px;
+  width: 100%;
+}
+.function_explane {
+  max-width: 512px;
+  margin-top: 36px;
+}
+.function_ttl {
+  font-family: "Noto Sans JP";
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #17A59E;
+  letter-spacing: 8%;
+}
+.function_text {
+  font-size: 1.6rem;
+  color: #111111;
+  margin-top: 2.3rem;
+  line-height: 3.5rem;
 }/*# sourceMappingURL=workdetail.css.map */
