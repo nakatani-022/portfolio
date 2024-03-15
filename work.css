@@ -149,6 +149,7 @@ li {
   align-items: center;
   gap: 10px;
   margin-bottom: 35px;
+  border-radius: 12px;
 }
 @media (max-width: 500px) {
   .work_heading {
@@ -196,6 +197,7 @@ li {
   }
 }
 .work_info {
+  font-family: "Noto Sans JP";
   color: #111;
   font-size: 1.6rem;
   font-style: normal;
@@ -374,6 +376,12 @@ li {
   display: flex;
   flex-wrap: wrap;
 }
+.tab_list {
+  margin-right: 19px;
+}
+.tab_list:focus {
+  outline: #111;
+}
 .tab_item {
   border: 0.2rem solid #17A59E;
   border-radius: 10px;
@@ -383,7 +391,6 @@ li {
   background-color: #FAFAFA;
   font-family: "Noto Sans JP";
   font-weight: bold;
-  margin-right: 19px;
   cursor: pointer;
   min-width: 15rem;
   text-align: center;

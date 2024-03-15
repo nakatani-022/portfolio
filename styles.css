@@ -680,6 +680,7 @@ li {
   align-items: center;
   gap: 10px;
   margin-bottom: 35px;
+  border-radius: 12px;
 }
 @media (max-width: 500px) {
   .work_heading {
@@ -905,6 +906,12 @@ li {
   display: flex;
   flex-wrap: wrap;
 }
+.tab_list {
+  margin-right: 19px;
+}
+.tab_list:focus {
+  outline: #111;
+}
 .tab_item {
   border: 0.2rem solid #17A59E;
   border-radius: 10px;
@@ -914,7 +921,6 @@ li {
   background-color: #FAFAFA;
   font-family: "Noto Sans JP";
   font-weight: bold;
-  margin-right: 19px;
   cursor: pointer;
   min-width: 15rem;
   text-align: center;
@@ -1397,6 +1403,7 @@ li {
   margin-top: 120px;
   margin-left: auto;
   width: 257px;
+  height: 80px;
 }
 @media (max-width: 990px) {
   .aboutme_button {
@@ -1414,6 +1421,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
   padding-bottom: 2px;
   position: relative;
 }
@@ -1450,7 +1458,7 @@ li {
 }
 .aboutme_icon_button {
   position: absolute;
-  top: -20px;
+  top: 10px;
   left: 180px;
 }
 @media (max-width: 360px) {

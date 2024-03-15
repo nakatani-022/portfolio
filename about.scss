@@ -101,12 +101,11 @@ margin-top: 126px;
   font-style: normal;
   font-weight: 700;
   line-height: 5.7rem;
-  letter-spacing: 5.6px;
-  padding: 1.2rem;
-  max-width: 470px;
+  letter-spacing: 0.5rem;
+  padding: 1.2rem 2.8rem;
+  width: fit-content;
   @include mq(1030px){
     font-size: 2.4em;
-    max-width: 360px;
     line-height: 4.8rem;
   }
   &2{
@@ -277,6 +276,7 @@ margin-top: 126px;
     }
   }
   &_text{
+    font-family: "Noto Sans JP";
     font-size: 1.5rem;
     padding-top: 21px;
     line-height: 3.2rem;
@@ -330,3 +330,4 @@ margin-top: 126px;
     }
   }
 }
+

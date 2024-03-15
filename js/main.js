@@ -21,6 +21,7 @@ const tab_program = document.querySelector("#tab_program");
 const tab_design = document.querySelector("#tab_design");
 const check = document.querySelectorAll(".check");
 
+console.log(tab_design);
 
 
 
@@ -28,10 +29,8 @@ const check = document.querySelectorAll(".check");
 
 
 
-// タブの切り替え
-const tab_lists = document.querySelectorAll('.tab_item');
 
-tab_lists[0].classList.add('check');
+
 
 
 
@@ -41,6 +40,14 @@ tab_lists[0].classList.add('check');
 const work_box = document.querySelector("#work_box");
 
 const work_cards = [
+  {
+    info: 'GoogleBooksAPI×React×TypeScript',
+    title: '知識の森',
+    label: 'Webアプリ',
+    url: './work_list/googlebooks.html',
+    src: './img/google_books_thumbnail.png',
+    type: 'tab_program'
+  },
   {
     info: '一般社団法人MBTI連盟',
     title: 'MBTI',
@@ -74,16 +81,8 @@ const work_cards = [
     type: 'tab_design'
   },
   {
-    info: 'GoogleBooksAPI×React×TypeScript',
-    title: '知識の森',
-    label: 'Webアプリ',
-    url: './work_list/googlebooks.html',
-    src: './img/google_books_thumbnail.png',
-    type: 'tab_program'
-  },
-  {
     info: 'cording',
-    title: '株式会社園崎',
+    title: 'sonozaki corporate',
     label: 'Webサイト',
     url: './work_list/sonozaki_corporate.html',
     src: './img/sonozaki_corporate_thumbnail.png',
@@ -104,13 +103,17 @@ const work_cards = [
 
   for(let i=0; i < work_cards.length; i++){
     const {info, title, label, url, src} = work_cards[i];
-    console.log(url);
     const card_create = `<li class="work_card" >
     <a class="work_card_inner" href="${url}"><div class="work_content"><p class="work_info">${info}</p><h3 class="work_lead">${title}</h3><label class="work_label">${label}</label><button class="work_button"><div class="work_button_text">制作実績<span class="work_icon"><img class="work_icon_button" src="./img/Button__Icon.svg" alt=""></span></div></button></div><div class="work_wrapper"><img class="work_thumbnail" src="${src}" alt="キャプチャ:${title}のサムネイル"></div></a>`;
 
     work_box.insertAdjacentHTML('beforebegin', card_create);
   }
 
+
+  // タブの切り替え
+const tab_lists = document.querySelectorAll('.tab_item');
+
+tab_lists[0].classList.add('check');
   // thisを使用するために関数宣言を使用する
   // タブの切り替えボタン
 function tab_switch() {
@@ -146,7 +149,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+const tab_links = document.querySelectorAll('#tab_link');
+console.log(tab_links);
 
-const tab_contents = document.querySelectorAll('.work_card');
-  
-tab_contents[0].classList.add('show');
+for(let i=0; i < tab_links.length; i++){
+ tab_links[i].addEventListener("click", (event)=> {
+  event.preventDefault();
+})
+}
