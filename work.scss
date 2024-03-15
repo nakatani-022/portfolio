@@ -32,6 +32,7 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 35px;
+    border-radius: 12px;
 
     @include mq(500px) {
       font-size: 2.9rem;
@@ -80,6 +81,7 @@
   }
 
   &_info {
+    font-family: "Noto Sans JP";
     color: #111;
     font-size: 1.6rem;
     font-style: normal;
@@ -265,6 +267,13 @@
   display: flex;
   flex-wrap: wrap;
 
+  &_list{
+    margin-right: 19px;
+    &:focus {
+      outline: #111;
+  }
+  }
+
   &_item {
     border: 0.2rem solid $main;
     border-radius: 10px;
@@ -274,7 +283,6 @@
     background-color: $white;
     font-family: "Noto Sans JP";
     font-weight: bold;
-    margin-right: 19px;
     cursor: pointer;
     min-width: 15rem;
     text-align: center;
@@ -305,3 +313,4 @@
         padding-right: 10px;
       }
 }
+

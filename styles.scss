@@ -233,6 +233,7 @@
     margin-top: 120px;
     margin-left: auto;
     width: 257px;
+    height: 80px;
 
     @include mq(990px) {
       margin-top: 70px;
@@ -252,6 +253,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
     @include hover_link($width: 35%);
   }
 
@@ -272,7 +274,7 @@
 
     &_button {
       position: absolute;
-      top: -20px;
+      top: 10px;
       left: 180px;
       @include mq(360px){
         left: 130px;

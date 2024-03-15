@@ -680,6 +680,7 @@ li {
   align-items: center;
   gap: 10px;
   margin-bottom: 35px;
+  border-radius: 12px;
 }
 @media (max-width: 500px) {
   .work_heading {
@@ -905,6 +906,12 @@ li {
   display: flex;
   flex-wrap: wrap;
 }
+.tab_list {
+  margin-right: 19px;
+}
+.tab_list:focus {
+  outline: #111;
+}
 .tab_item {
   border: 0.2rem solid #17A59E;
   border-radius: 10px;
@@ -914,7 +921,6 @@ li {
   background-color: #FAFAFA;
   font-family: "Noto Sans JP";
   font-weight: bold;
-  margin-right: 19px;
   cursor: pointer;
   min-width: 15rem;
   text-align: center;
@@ -1282,14 +1288,14 @@ li {
   font-style: normal;
   font-weight: 700;
   line-height: 5.7rem;
-  letter-spacing: 5.6px;
-  padding: 1.2rem;
-  max-width: 470px;
+  letter-spacing: 0.5rem;
+  padding: 1.2rem 2.8rem;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 @media (max-width: 1030px) {
   .aboutme_heading2 {
     font-size: 2.4em;
-    max-width: 360px;
     line-height: 4.8rem;
   }
 }
@@ -1483,6 +1489,7 @@ li {
   }
 }
 .work2_text {
+  font-family: "Noto Sans JP";
   font-size: 1.5rem;
   padding-top: 21px;
   line-height: 3.2rem;
