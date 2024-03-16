@@ -21,20 +21,6 @@ const tab_program = document.querySelector("#tab_program");
 const tab_design = document.querySelector("#tab_design");
 const check = document.querySelectorAll(".check");
 
-console.log(tab_design);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 const work_box = document.querySelector("#work_box");
@@ -142,13 +128,13 @@ function tab_switch() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  for(let i= 0; i < tab_lists.length; i++){
-    tab_lists[i].addEventListener('click', tab_switch);
+  for(let value of tab_lists){
+    value.addEventListener('click', tab_switch)
   }
-});
+  });
 
+// タブをクリックしても遷移しない様に
 const tab_links = document.querySelectorAll('#tab_link');
-console.log(tab_links);
 
 for(let i=0; i < tab_links.length; i++){
  tab_links[i].addEventListener("click", (event)=> {
