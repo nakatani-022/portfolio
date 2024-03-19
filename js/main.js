@@ -85,13 +85,21 @@ const work_cards = [
 ]
 
 
-  for(let i=0; i < work_cards.length; i++){
-    const {info, title, label, url, src} = work_cards[i];
+  // for(let i=0; i < work_cards.length; i++){
+  //   const {info, title, label, url, src} = work_cards[i];
+  //   const card_create = `<li class="work_card" >
+  //   <a class="work_card_inner" href="${url}"><div class="work_content"><p class="work_info">${info}</p><h3 class="work_lead">${title}</h3><label class="work_label">${label}</label><button class="work_button"><div class="work_button_text">制作実績<span class="work_icon"><img class="work_icon_button" src="./img/Button__Icon.svg" alt=""></span></div></button></div><div class="work_wrapper"><img class="work_thumbnail" src="${src}" alt="キャプチャ:${title}のサムネイル"></div></a>`;
+
+  //   work_box.insertAdjacentHTML('beforebegin', card_create);
+  // }
+
+  work_cards.forEach((card) => {
+    const {info, title, label, url, src} = card;
     const card_create = `<li class="work_card" >
-    <a class="work_card_inner" href="${url}"><div class="work_content"><p class="work_info">${info}</p><h3 class="work_lead">${title}</h3><label class="work_label">${label}</label><button class="work_button"><div class="work_button_text">制作実績<span class="work_icon"><img class="work_icon_button" src="./img/Button__Icon.svg" alt=""></span></div></button></div><div class="work_wrapper"><img class="work_thumbnail" src="${src}" alt="キャプチャ:${title}のサムネイル"></div></a>`;
+     <a class="work_card_inner" href="${url}"><div class="work_content"><p class="work_info">${info}</p><h3 class="work_lead">${title}</h3><label class="work_label">${label}</label><button class="work_button"><div class="work_button_text">制作実績<span class="work_icon"><img class="work_icon_button" src="./img/Button__Icon.svg" alt=""></span></div></button></div><div class="work_wrapper"><img class="work_thumbnail" src="${src}" alt="キャプチャ:${title}のサムネイル"></div></a>`;
 
     work_box.insertAdjacentHTML('beforebegin', card_create);
-  }
+  })
 
 
   // タブの切り替え
@@ -136,8 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // タブをクリックしても遷移しない様に
 const tab_links = document.querySelectorAll('#tab_link');
 
-for(let i=0; i < tab_links.length; i++){
- tab_links[i].addEventListener("click", (event)=> {
-  event.preventDefault();
+tab_links.forEach((tab_link)=>{
+  tab_link.addEventListener("click", (event)=>{
+    event.preventDefault();
+  })
 })
-}
