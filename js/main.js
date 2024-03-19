@@ -148,4 +148,4 @@ tab_links.forEach((tab_link)=>{
   tab_link.addEventListener("click", (event)=>{
     event.preventDefault();
   })
-})
+});
